@@ -16,7 +16,7 @@ COPY . /usr/src/app/
 WORKDIR /usr/src/app/
 
 # Install the required Python libraries
-RUN pip install --no-cache-dir opencv-python-headless mediapipe flask gunicorn
+RUN pip install --no-cache-dir opencv-python-headless mediapipe flask gunicorn gevent
 
 # Command to run the application
-CMD ["gunicorn", "-b", "0.0.0.0:5001", "blazepose_stream:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "blazepose_stream:app", "-b", "gevent", "--timeout", "120"]
