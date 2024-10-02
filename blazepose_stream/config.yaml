@@ -17,4 +17,4 @@ options:
 schema:
   camera_index: int
 devices:
-  - /dev/video0:/dev/video0
+  - /dev/video0
