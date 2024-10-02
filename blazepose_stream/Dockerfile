@@ -19,4 +19,4 @@ WORKDIR /usr/src/app/
 RUN pip install --no-cache-dir opencv-python-headless mediapipe flask gunicorn gevent
 
 # Command to run the application
-CMD ["gunicorn", "-b", "0.0.0.0:5001", "blazepose_stream:app", "-b", "gevent", "--timeout", "120"]
+CMD ["gunicorn", "-b", "0.0.0.0:5001", "blazepose_stream:app", "-k", "gevent", "--timeout", "120"]
