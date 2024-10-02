@@ -1,0 +1,12 @@
+{
+  "name": "BlazePose Add-ons",
+  "description": "Repository for BlazePose camera stream add-on for Home Assistant.",
+  "url": "https://github.com/sonpython/home-assistant-blazepose-addon",
+  "maintainer": "Michael Phan <sonpython@gmail.com>",
+  "arch": ["amd64", "armv7", "aarch64"],
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "camera_index": 0
+  }
+}
