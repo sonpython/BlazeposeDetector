@@ -1,0 +1,20 @@
+name: BlazePose Camera Stream
+version: "1.0"
+slug: blazepose_camera_stream
+description: Add-on to stream camera using BlazePose and integrate into Home Assistant
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: application
+boot: auto
+ports:
+  5001/tcp: 5001
+webui: http://[HOST]:[PORT:5001]
+host_network: true
+options:
+  camera_index: 0
+schema:
+  camera_index: int
+devices:
+  - /dev/video0:/dev/video0
